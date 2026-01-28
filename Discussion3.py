@@ -4,18 +4,23 @@ class Rectangle():
     # Create the constructor "__init__" method
 
     # YOUR CODE HERE
-
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
 
 
     # Create the "__str__" method
 
     # YOUR CODE HERE
-
-
+    def __str__(self):
+        return f"A rectangle with width {} and height {}".format(self.width, self.height)
 
     # Create the "area_calculator" method
 
     # YOUR CODE HERE
+    def area_calculator(self):
+
+
 
 
 
