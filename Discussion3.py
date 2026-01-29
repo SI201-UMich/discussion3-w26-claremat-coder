@@ -13,7 +13,7 @@ class Rectangle():
 
     # YOUR CODE HERE
     def __str__(self):
-        return f"A rectangle with width {} and height {}".format(self.width, self.height)
+        return f"A rectangle with width {self.width} and height {self.height}"
 
     # Create the "area_calculator" method
 
@@ -27,7 +27,10 @@ class Rectangle():
     # Returns a boolean value
 
     # YOUR CODE HERE
-
+    def __eq__(self, other): 
+        if not isinstance(other, Rectangle):
+            return False
+        return self.width == other.width and self.height == other.height
 
 
 def main():
@@ -35,12 +38,12 @@ def main():
     # call the __str__ method
     print(r1)
     # call the area_calculator method
-    print("Area:", r1.area_calculator())
+    #print("Area:", r1.area_calculator())
 
 
     r2 = Rectangle(10, 15)
     print(r2)
-    print("Area:", r2.area_calculator())
+    #print("Area:", r2.area_calculator())
     # call the __eq__ method
     print(r1 == r2)
     print()
